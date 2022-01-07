@@ -1,0 +1,39 @@
+
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 10%;
+    align-items: center;
+    background-color: #041C32;
+}
+.logo {
+    border: 3px solid #F14A16;
+    padding: 5px;
+    background-color: #FFF1BD;
+    border-radius: 5px;
+}
+
+.link-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.link {
+    color: #FFF1BD;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+
+}
+.link:hover {
+    color: #F14A16;
+}
