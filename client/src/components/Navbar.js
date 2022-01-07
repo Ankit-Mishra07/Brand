@@ -1,13 +1,14 @@
 import React from 'react'
 import "../styles/navbar.css"
 import {Link} from "react-router-dom"
+import DealOfDay from './DealOfDay'
 
 
 
 const Navbar = () => {
     return (
         <>
-
+        <DealOfDay />
         <nav className='navbar'>
             <div>
                 <div className='logo'>🅱🆁🅰🅽🅳</div>
