@@ -1,0 +1,57 @@
+.carousel {
+    overflow: hidden;
+  }
+
+
+  
+  .inner {
+    white-space: nowrap;
+    transition: transform 0.6s;
+  }
+  
+  .carousel-item {
+    display: inline-flex;
+    position: relative;
+    top : 82px;
+    align-items: center;
+    justify-content: center;
+    height: 94vh;
+    width: 100vw;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .indicators {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    margin: auto;
+    z-index: 999;
+    left: 40%;
+  }
+  
+  .indicators > button {
+    margin:0 10px;
+
+  }
+  #btns{
+    height: 5px;
+    width: 2rem;
+    margin-top: 5px;
+  }
+  
+  .indicators > button.active {
+    background-color: #F14A16;
+    color: #fff;
+  }
+  .next_btn , .prev_btn{
+      background-color: #041C32;
+      color: #FFF1BD;;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 5px;
+      display: none;
+  }
+
+  
