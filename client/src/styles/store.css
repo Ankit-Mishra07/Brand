@@ -1,0 +1,21 @@
+.store_top_bar{
+    margin-top: 5.7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: seashell;
+
+}
+
+.store_top_bar > div {
+    padding: 1.2rem;
+    color: #041C32;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.store_top_bar > div:hover {
+    border-bottom: 3px solid #F14A16;
+    cursor: pointer;
+    color: #F14A16;
+}

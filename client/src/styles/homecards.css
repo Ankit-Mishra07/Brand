@@ -1,0 +1,23 @@
+.container_brand_box{
+    margin-top: 4.5rem;
+    text-align: center;
+}
+.main_brand_box{
+    margin-top: 20px;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-gap: 6%;
+}
+.brand_cards {
+    border: 5px solid #FFF1BD;
+    box-shadow: 5px 5px 5px 2px  #064663;
+    border-radius: 10px;
+}
+.brand_cards > img {
+
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+}

@@ -8,6 +8,7 @@ import DealOfDay from './DealOfDay'
 const Navbar = () => {
     return (
         <>
+
         <DealOfDay />
         <nav className='navbar'>
             <div>
@@ -19,6 +20,7 @@ const Navbar = () => {
                 <Link className='link' to="/aboutus">About us</Link>
                 <Link className='link' to="/contactus">Contact us</Link>
                 <Link className='link' to="/login">Login</Link>
+                <div className='cart_icon'><i class="fas fa-cart-plus cart_icon"></i><sup>0</sup></div>
             </div>
         </nav>
 

@@ -13,6 +13,7 @@
     align-items: center;
     background-color: #041C32;
     box-shadow:0 4px 2px -2px #FFF1BD;
+    z-index: 9;
 }
 .logo {
     border: 3px solid #F14A16;
@@ -37,4 +38,17 @@
 }
 .link:hover {
     color: #F14A16;
+}
+
+.cart_icon{
+    color: #FFF1BD;
+    margin: 0 10px;
+    font-size: 18px;
+
+}
+.cart_icon:hover {
+    color: #F14A16;
+}
+.cart_icon sup {
+    font-size: 12px;
 }
