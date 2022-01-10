@@ -19,3 +19,12 @@
     cursor: pointer;
     color: #F14A16;
 }
+.store-container{
+    display: grid;
+    grid-template-columns: 20% 75%;
+    grid-gap: 5%;
+
+    width: 90%;
+    margin: auto;
+    margin-top: 1.5rem;
+}

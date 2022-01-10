@@ -1,12 +1,13 @@
 import React from 'react'
+import "../styles/storesidebar.css"
 
-const StoreSideBar = () => {
+const StoreSideBar = ({filterCatProduct}) => {
     return (
-        <div>
-            <div>All</div>
-            <div>Men</div>
-            <div>Women</div>
-            <div>Unisex</div>
+        <div className='sidenavigate'>
+            <div onClick={() => filterCatProduct("All")}>All</div>
+            <div onClick={() => filterCatProduct("men")}>Men</div>
+            <div onClick={() => filterCatProduct("women")}>Women</div>
+            <div onClick={() => filterCatProduct("unisex")}>Unisex</div>
         </div>
     )
 }
