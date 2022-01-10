@@ -20,10 +20,18 @@ const Store = () => {
     const filterCatProduct = (cat) => {
         let newData;
         if(cat === "All" && brand === "All") {
-           setData(shoes.data)
+           newData = shoes.data
         }else if(cat === "All" && brand !== "All"){
              newData = shoes.data.filter((e) => {
                 return brand === e.brand
+            })
+        }else if (cat !== "All" && brand === "All") {
+            newData = shoes.data.filter((e) => {
+                return cat === e.for
+            })
+        }else {
+            newData = shoes.data.filter((e) => {
+                return (cat === e.for) && (brand === e.brand)
             })
         }
 
@@ -52,15 +60,18 @@ const Store = () => {
                 <div className='products_container'>
                     {
                         data.map((e, i) => (
-                            <div key={i}>
+                            <div key={i} className='product_card'>
 
                             <div>
-                                <img src={e.img} alt="" />
+                                <img src={e.img} alt="" className='prod_img'/>
                             </div>
-                            <div>
-                                <p>{e.title}</p>
-                                <p>{e.price}</p>
-                                <button>Add to cart</button>
+                            <div className='text_box'>
+                                <p>{e.title.substring(0,50)}</p>
+                                <p>Price : {e.price}₹</p>
+                            </div>
+                            <div className='btn_box'>
+                            <button>ADD TO CART</button>
+                                <button><i class="far fa-heart"></i></button>
                             </div>
 
                             </div>
