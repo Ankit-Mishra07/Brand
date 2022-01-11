@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import "../styles/navbar.css"
 import {Link} from "react-router-dom"
 import DealOfDay from './DealOfDay'
+import { AuthContext } from '../Context/AuthContext'
 
 
 
 const Navbar = () => {
+
+    const {email} = useContext(AuthContext)
+
     return (
         <>
 
@@ -19,8 +23,11 @@ const Navbar = () => {
                 <Link className='link' to="/store">Store</Link>
                 <Link className='link' to="/aboutus">About us</Link>
                 <Link className='link' to="/contactus">Contact us</Link>
+                {
+                email ?   <Link className='link' to="/" style={{textTransform: "uppercase"}}>{email[0] + email[1]}</Link> :
                 <Link className='link' to="/login">Login</Link>
-                <div className='cart_icon'><i class="fas fa-cart-plus cart_icon"></i><sup>0</sup></div>
+                }
+                <Link className='link' to="/cart"><div className='cart_icon'><i class="fas fa-cart-plus cart_icon"></i><sup>0</sup></div></Link>
             </div>
         </nav>
 

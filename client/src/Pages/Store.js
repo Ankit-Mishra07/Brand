@@ -2,13 +2,18 @@ import React, { useState } from 'react'
 import "../styles/store.css"
 import StoreSideBar from './StoreSideBar'
 import {shoes} from "../Products/shoes"
-import {Link} from "react-router-dom"
-import { useEffect } from 'react'
+import {Link, useNavigate} from "react-router-dom"
+import { useEffect, useContext } from 'react'
+import { AuthContext } from '../Context/AuthContext'
+import swal from 'sweetalert';
 
 const Store = () => {
     const [data, setData] = useState([])
     const [brand, setBrand] = useState("All")
     const [shoes, setShoes] = useState()
+
+    const navigate = useNavigate()
+    const {email} = useContext(AuthContext)
 
     const getDB = async () => {
         let get = await fetch("http://localhost:5000/data")
@@ -62,8 +67,23 @@ const Store = () => {
     }
 
 
-    const addtoCart = () => {
-        
+    const addtoCart = (e) => {
+        if(!email) {
+            alert("Please login to add products in cart")
+            navigate("/login")
+            return
+        }
+        e["email"] = email
+
+        fetch("http://localhost:5000/cart", {
+            method : "POST",
+            body : JSON.stringify(e),
+            headers : {
+                "Content-Type" : "application/json"
+            }
+        }).then(res => res.json()).then(res => {
+            swal("Porduct is Added to your cart")
+        })
     }
 
     return (
@@ -87,14 +107,14 @@ const Store = () => {
                         data.map((e) => (
                            
                             <div key={e.id} className='product_card'>
-                            <Link to={`/store/${e.id}`}>
+                            <Link to={`/store/${e.id}`} className='links'>
                             
                             <div>
                                 <img src={e.img} alt="" className='prod_img'/>
                             </div>
                             <div className='text_box'>
                                 <p>{e.title.substring(0,50)}</p>
-                                <p>Price : {e.price}₹</p>
+                                <p>Price : ₹{e.price}</p>
                                 
                             </div>
                             </Link>

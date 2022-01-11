@@ -3,6 +3,7 @@ import '../styles/login.css'
 import {nanoid} from 'nanoid'
 import { AuthContext } from '../Context/AuthContext'
 import { useNavigate } from 'react-router-dom'
+import swal from 'sweetalert'
 const Login = () => {
 
     const [form, setForm] = useState({email : "", password : ""})
@@ -23,7 +24,7 @@ const Login = () => {
 
         console.log(form)
         if(form.email == "" || form.password == '') {
-            alert("Please fill valid email and password")
+            swal("Request!","Please fill valid email and password", "warning")
             return
         }
 
@@ -39,7 +40,7 @@ const Login = () => {
             }
         }).then(res => res.json()).then(res => {
 
-            alert("Logged In successfully")
+            swal("Great!", "Logged In successfully","success")
             navigate(-1)
             
         })

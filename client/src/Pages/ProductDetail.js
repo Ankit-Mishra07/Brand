@@ -21,7 +21,7 @@ const ProductDetail = () => {
             </div>
             <div className='text_box'>
                 <p>{oneData.title}</p>
-                <p>Price : {oneData.price}₹</p>
+                <p>Price : ₹{oneData.price}</p>
                 <p>Size available : 8 9 10 11</p>
                 <button className='addtocart'>ADD TO CART</button>
 

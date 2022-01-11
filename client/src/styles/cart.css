@@ -1,0 +1,53 @@
+.link1 {
+    text-decoration: none;
+    color: inherit;
+}
+.cardcont{
+    width: 80%;
+    margin: auto;
+    margin-top: 130px;
+}
+
+.cart_card{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 4%;
+    margin-top: 20px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+    background-color: #FFF1BD;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform .5s;
+    
+}
+.imgbox{
+    text-align: center;
+}
+.imgbox > img{
+    width: 80%;
+    height: 300px;
+    border-radius: 10px;
+}
+.cart_card:hover {
+    transform: scale(1.03);
+}
+.textbox {
+    text-align: left;
+}
+
+.proceed{
+    background-color:  #041C32;
+    color: #FFF1BD;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    padding:10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.proceed:hover {
+    background-color: #FFF1BD;
+    color: #041C32;
+    border: 2px solid #041C32;
+}
