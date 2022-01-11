@@ -5,6 +5,7 @@ import Slides from './components/Slides';
 import {Routes, Route} from "react-router-dom"
 import Store from './Pages/Store';
 import ProductDetail from './Pages/ProductDetail';
+import Login from './Pages/Login';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Route path="/" element={  <HomeCard />}></Route>
       <Route path="/store" element={<Store/>}></Route>
       <Route path="/store/:id" element={<ProductDetail />}></Route>
-      
+      <Route path="/login" element={<Login />}></Route>
       </Routes>
     </div>
   );

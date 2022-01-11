@@ -279,5 +279,26 @@
       "des": "The one and only Air Jordan 1 Low gets a new look and feel with this special utility edition.It's made from rugged, black and white canvas material, including the Swoosh logo.Red stitch detail adds a pop of colour along the overlays.",
       "brand": "puma"
     }
-  ]
+  ],
+  "users": [
+    {
+      "email": "ankitmi468@gmail.com",
+      "password": "asdfgh",
+      "token": "iNvRE",
+      "id": 1
+    },
+    {
+      "email": "ankit_fw12_026@masai.school",
+      "password": "asdfg",
+      "token": "Ow8iz",
+      "id": 2
+    },
+    {
+      "email": "asd",
+      "password": "asc",
+      "token": "gVYhG",
+      "id": 3
+    }
+  ],
+  "cart" : []
 }

@@ -62,6 +62,10 @@ const Store = () => {
     }
 
 
+    const addtoCart = () => {
+        
+    }
+
     return (
         <div>
             <div className='store_top_bar'>
@@ -91,10 +95,11 @@ const Store = () => {
                             <div className='text_box'>
                                 <p>{e.title.substring(0,50)}</p>
                                 <p>Price : {e.price}₹</p>
+                                
                             </div>
                             </Link>
                             <div className='btn_box'>
-                            <button>ADD TO CART</button>
+                            <button onClick={() => addtoCart(e)}>ADD TO CART</button>
                                 <button><i class="far fa-heart"></i></button>
                             </div>
 
