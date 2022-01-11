@@ -2,13 +2,31 @@ import React, { useState } from 'react'
 import "../styles/store.css"
 import StoreSideBar from './StoreSideBar'
 import {shoes} from "../Products/shoes"
+import {Link} from "react-router-dom"
+import { useEffect } from 'react'
 
 const Store = () => {
-    const [data, setData] = useState(shoes.data)
+    const [data, setData] = useState([])
     const [brand, setBrand] = useState("All")
+    const [shoes, setShoes] = useState()
 
-    const filterProduct = (prod) => {
-        const newData = shoes.data.filter((e) => {
+    const getDB = async () => {
+        let get = await fetch("http://localhost:5000/data")
+        let res = await get.json()
+        setData(res)
+    }
+
+    useEffect(() => {
+        getDB()
+    }, [])
+
+    
+
+    const filterProduct = async (prod) => {
+        let get = await fetch("http://localhost:5000/data")
+        let res = await get.json()
+        // setData(res)
+        const newData = res.filter((e) => {
             return e.brand === prod
         })
         setData(newData)
@@ -17,20 +35,23 @@ const Store = () => {
 
 
 
-    const filterCatProduct = (cat) => {
+    const filterCatProduct = async (cat) => {
+        let get = await fetch("http://localhost:5000/data")
+        let res = await get.json()
+        // setData(res)
         let newData;
         if(cat === "All" && brand === "All") {
-           newData = shoes.data
+           newData = res
         }else if(cat === "All" && brand !== "All"){
-             newData = shoes.data.filter((e) => {
+             newData = res.filter((e) => {
                 return brand === e.brand
             })
         }else if (cat !== "All" && brand === "All") {
-            newData = shoes.data.filter((e) => {
+            newData = res.filter((e) => {
                 return cat === e.for
             })
         }else {
-            newData = shoes.data.filter((e) => {
+            newData = res.filter((e) => {
                 return (cat === e.for) && (brand === e.brand)
             })
         }
@@ -45,7 +66,7 @@ const Store = () => {
         <div>
             <div className='store_top_bar'>
                 <div onClick={() => {
-                    setData(shoes.data)
+                    getDB()
                     setBrand("All")
                 }
                 }>All</div>
@@ -59,9 +80,11 @@ const Store = () => {
                 <StoreSideBar filterCatProduct={filterCatProduct}/>
                 <div className='products_container'>
                     {
-                        data.map((e, i) => (
-                            <div key={i} className='product_card'>
-
+                        data.map((e) => (
+                           
+                            <div key={e.id} className='product_card'>
+                            <Link to={`/store/${e.id}`}>
+                            
                             <div>
                                 <img src={e.img} alt="" className='prod_img'/>
                             </div>
@@ -69,6 +92,7 @@ const Store = () => {
                                 <p>{e.title.substring(0,50)}</p>
                                 <p>Price : {e.price}₹</p>
                             </div>
+                            </Link>
                             <div className='btn_box'>
                             <button>ADD TO CART</button>
                                 <button><i class="far fa-heart"></i></button>
