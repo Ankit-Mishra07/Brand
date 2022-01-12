@@ -370,9 +370,126 @@
       "password": "asdfg",
       "token": "JbxpB",
       "id": 15
+    },
+    {
+      "email": "ankit_fw12_026@masai.school",
+      "password": "asdf",
+      "token": "UO7LD",
+      "id": 16
+    },
+    {
+      "email": "arjunmishra50@gmail.com",
+      "password": "sdfgh",
+      "token": "B8fy7",
+      "id": 17
+    },
+    {
+      "email": "ankit_fw12_026@masai.school",
+      "password": "asdfg",
+      "token": "N1eV-",
+      "id": 18
+    },
+    {
+      "email": "ankit_fw12_026@masai.school",
+      "password": "asdfg",
+      "token": "8fpms",
+      "id": 19
+    },
+    {
+      "email": "ankitmi468@gmail.com",
+      "password": "asdfg",
+      "token": "F33mr",
+      "id": 20
+    },
+    {
+      "email": "ankitmi468@gmail.com",
+      "password": "asdf",
+      "token": "_2rWd",
+      "id": 21
+    },
+    {
+      "email": "ankit_fw12_026@masai.school",
+      "password": "asdf",
+      "token": "nkhkY",
+      "id": 22
+    },
+    {
+      "email": "ankit_fw12_026@masai.school",
+      "password": "asdf",
+      "token": "77Eyq",
+      "id": 23
+    },
+    {
+      "email": "ankitmi468@gmail.com",
+      "password": "asdf",
+      "token": "5o46k",
+      "id": 24
+    },
+    {
+      "email": "ankit_fw12_026@masai.school",
+      "password": "asdasdfg",
+      "token": "tzWFZ",
+      "id": 25
+    },
+    {
+      "email": "ankit_fw12_026@masai.school",
+      "password": "asdfasdf",
+      "token": "3DDlE",
+      "id": 26
+    },
+    {
+      "email": "abhikitmi468@gmail.com",
+      "password": "asdefsc",
+      "token": "Kd9hm",
+      "id": 27
+    },
+    {
+      "email": "abhikitmi468@gmail.com",
+      "password": "asdfg",
+      "token": "Sb5ft",
+      "id": 28
     }
   ],
   "cart": [
-   
+    {
+      "id": "2",
+      "title": "Nike Air MAX sets you up for working out with durable leather on top for support. Lightweight foam teams up with Nike Air cushioning for comfort in every stride.",
+      "img": "https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_415,c_limit/9589cfe8-74eb-4bee-b979-4a1a9e4e1e63/air-max-97-shoe-Ks2tvF.png",
+      "price": 15299,
+      "for": "men",
+      "des": "The one and only Air Jordan 1 Low gets a new look and feel with this special utility edition.It's made from rugged, black and white canvas material, including the Swoosh logo.Red stitch detail adds a pop of colour along the overlays.",
+      "brand": "nike",
+      "email": "ankit_fw12_026@masai.school"
+    },
+    {
+      "id": "5",
+      "title": "Nike SNKRS sets you up for working out with durable leather on top for support. Lightweight foam teams up with Nike Air cushioning for comfort in every stride.",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f0c6bdc2-b8fe-45f7-a76d-ae1bbf30e156/air-jordan-4-retro-shoe.png",
+      "price": 15990,
+      "for": "men",
+      "des": "The one and only Air Jordan 1 Low gets a new look and feel with this special utility edition.It's made from rugged, black and white canvas material, including the Swoosh logo.Red stitch detail adds a pop of colour along the overlays.",
+      "brand": "nike",
+      "email": "ankit_fw12_026@masai.school"
+    },
+    {
+      "id": "1",
+      "title": "Nike Air Monarch IV sets you up for working out with durable leather on top for support. Lightweight foam teams up with Nike Air cushioning for comfort in every stride.",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/uirypqqxq83mwcjbf9ej/air-monarch-iv-training-shoe-cc3XbD.png",
+      "price": 5299,
+      "for": "men",
+      "des": "The one and only Air Jordan 1 Low gets a new look and feel with this special utility edition.It's made from rugged, black and white canvas material, including the Swoosh logo.Red stitch detail adds a pop of colour along the overlays.",
+      "brand": "nike",
+      "email": "abhikitmi468@gmail.com"
+    },
+    {
+      "id": "12",
+      "title": "Adidas Pictor sets you up for working out with durable leather on top for support. Lightweight foam teams up with Nike Air cushioning for comfort in every stride.",
+      "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/576b22cd8b974851aedcadb800b7c712_9366/Pictor_Shoes_Grey_EX2181_01_standard.jpg",
+      "price": 2499,
+      "for": "men",
+      "des": "The one and only Air Jordan 1 Low gets a new look and feel with this special utility edition.It's made from rugged, black and white canvas material, including the Swoosh logo.Red stitch detail adds a pop of colour along the overlays.",
+      "brand": "adidas",
+      "email": "abhikitmi468@gmail.com"
+    }
   ]
 }

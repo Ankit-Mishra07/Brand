@@ -52,3 +52,20 @@
 .cart_icon sup {
     font-size: 12px;
 }
+.logoutbtn{
+    background-color: #041C32;
+    color: #FFF1BD;
+    font-weight: 500;
+    padding: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+.logoutbtn:hover {
+    background-color: #F14A16;
+}
+.logolink{
+    color: inherit;
+    text-decoration: none;
+}

@@ -8,7 +8,7 @@ import { AuthContext } from '../Context/AuthContext'
 
 const Navbar = () => {
 
-    const {email} = useContext(AuthContext)
+    const {email, handleLogout} = useContext(AuthContext)
 
     return (
         <>
@@ -16,7 +16,7 @@ const Navbar = () => {
         <DealOfDay />
         <nav className='navbar'>
             <div>
-                <div className='logo'>🅱🆁🅰🅽🅳</div>
+               <Link to="/" className='logolink'><div className='logo'>🅱🆁🅰🅽🅳</div></Link> 
             </div>
             <div className='link-box'>
                 <Link className='link' to="/" >Home</Link>
@@ -28,6 +28,7 @@ const Navbar = () => {
                 <Link className='link' to="/login">Login</Link>
                 }
                 <Link className='link' to="/cart"><div className='cart_icon'><i class="fas fa-cart-plus cart_icon"></i></div></Link>
+            {email && <button className='logoutbtn' onClick={() => handleLogout()}>LOGOUT</button> }
             </div>
         </nav>
 

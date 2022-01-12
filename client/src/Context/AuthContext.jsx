@@ -4,9 +4,18 @@ export const AuthContext = createContext()
 
 export const AuthContextProvider = ({children}) => {
 
+    if(localStorage.getItem("brandusers") === null) {
+        localStorage.setItem("brandusers", JSON.stringify([]))
+    }
+
+    let get = JSON.parse(localStorage.getItem("brandusers"))
+    let last = get[get.length-1] || ""
+
+
     const [token, setToken] = useState('')
     const [isAuth, setIsAuth] = useState(false)
-    const [email, setEmail] = useState()
+    const [email, setEmail] = useState(last)
+
     const handleToken = (token, email) => {
         if(token && email) {
             setIsAuth(true)
@@ -19,6 +28,7 @@ export const AuthContextProvider = ({children}) => {
         setIsAuth(false)
         setToken("")
         setEmail("")
+        localStorage.setItem("brandusers", JSON.stringify([]))
     }
 
     return (

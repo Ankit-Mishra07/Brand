@@ -6,7 +6,20 @@ import { useNavigate } from 'react-router-dom'
 import swal from 'sweetalert'
 const Login = () => {
 
+    const getLocal = () => {
+        let Data = localStorage.getItem("brandusers")
+
+        if(Data) {
+            return JSON.parse(Data)
+        }else {
+            return []
+        }
+}
+
+
     const [form, setForm] = useState({email : "", password : ""})
+
+    const [log, setLog] = useState(getLocal())
 
     const {handleToken, token, isAuth} = useContext(AuthContext)
     const navigate = useNavigate()
@@ -30,6 +43,9 @@ const Login = () => {
 
         form["token"] = nanoid(5)
         handleToken(form.token, form.email)
+
+        setLog([...log, form.email])
+        localStorage.setItem("brandusers", JSON.stringify([...log, form.email]))
 
 
         fetch("http://localhost:5000/users", {
