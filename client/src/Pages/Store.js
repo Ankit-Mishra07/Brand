@@ -69,7 +69,7 @@ const Store = () => {
 
     const addtoCart = (e) => {
         if(!email) {
-            alert("Please login to add products in cart")
+            swal("Please login to add products in cart", "failure")
             navigate("/login")
             return
         }
