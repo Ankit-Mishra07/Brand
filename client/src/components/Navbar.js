@@ -27,7 +27,7 @@ const Navbar = () => {
                 email ?   <Link className='link' to="/" style={{textTransform: "uppercase"}}>{email[0] + email[1]}</Link> :
                 <Link className='link' to="/login">Login</Link>
                 }
-                <Link className='link' to="/cart"><div className='cart_icon'><i class="fas fa-cart-plus cart_icon"></i><sup>0</sup></div></Link>
+                <Link className='link' to="/cart"><div className='cart_icon'><i class="fas fa-cart-plus cart_icon"></i></div></Link>
             </div>
         </nav>
 

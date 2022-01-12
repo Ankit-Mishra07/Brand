@@ -1,14 +1,15 @@
 import React,{useState, useContext, useEffect} from 'react'
 import { AuthContext } from '../Context/AuthContext'
-import { Link } from 'react-router-dom'
+import { Link , useNavigate} from 'react-router-dom'
 import '../styles/cart.css'
+import swal from 'sweetalert'
 
 const Cart = () => {
 
     const {email} = useContext(AuthContext)
     const [data, setData] = useState([])
     const [total, setTotal] = useState(0)
-
+    const navigate = useNavigate()
     const getCart = async() => {
         let res = await fetch(`http://localhost:5000/cart`)
         let dat = await res.json()
@@ -28,6 +29,12 @@ const Cart = () => {
     useEffect(() => {
        getCart()
     }, [])
+
+
+    const ProceedTopay = () => {
+        swal("Thank You", "Congrats Ordered Successfully!", "success");
+        navigate("/store")
+    }
 
     
 
@@ -53,7 +60,7 @@ const Cart = () => {
                     </Link>
                 ))
             }
-            <button className='proceed'>PROCEED TO PAY {total}</button>
+            <button className='proceed' onClick={ProceedTopay}>PROCEED TO PAY {total}</button>
         </div>
 
         </>

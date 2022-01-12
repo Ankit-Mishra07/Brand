@@ -352,28 +352,27 @@
       "password": "sdf",
       "token": "2ecR8",
       "id": 12
+    },
+    {
+      "email": "ankit_fw12_026@masai.school",
+      "password": "sdfg",
+      "token": "H1Wrd",
+      "id": 13
+    },
+    {
+      "email": "ankit_fw12_026@masai.school",
+      "password": "asdf",
+      "token": "WiqlM",
+      "id": 14
+    },
+    {
+      "email": "ankit_fw12_026@masai.school",
+      "password": "asdfg",
+      "token": "JbxpB",
+      "id": 15
     }
   ],
   "cart": [
-    {
-      "id": "1",
-      "title": "Nike Air Monarch IV sets you up for working out with durable leather on top for support. Lightweight foam teams up with Nike Air cushioning for comfort in every stride.",
-      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/uirypqqxq83mwcjbf9ej/air-monarch-iv-training-shoe-cc3XbD.png",
-      "price": 5299,
-      "for": "men",
-      "des": "The one and only Air Jordan 1 Low gets a new look and feel with this special utility edition.It's made from rugged, black and white canvas material, including the Swoosh logo.Red stitch detail adds a pop of colour along the overlays.",
-      "brand": "nike",
-      "email": "ankit_fw12_026@masai.school"
-    },
-    {
-      "id": "2",
-      "title": "Nike Air Monarch IV sets you up for working out with durable leather on top for support. Lightweight foam teams up with Nike Air cushioning for comfort in every stride.",
-      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/uirypqqxq83mwcjbf9ej/air-monarch-iv-training-shoe-cc3XbD.png",
-      "price": 5299,
-      "for": "men",
-      "des": "The one and only Air Jordan 1 Low gets a new look and feel with this special utility edition.It's made from rugged, black and white canvas material, including the Swoosh logo.Red stitch detail adds a pop of colour along the overlays.",
-      "brand": "nike",
-      "email": "ankit_fw12_026@masai.school"
-    }
+   
   ]
 }

@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: 47% 47%;
     grid-gap: 6%;
+    padding-bottom:400px;
 }
 .brand_cards {
     border: 5px solid #FFF1BD;

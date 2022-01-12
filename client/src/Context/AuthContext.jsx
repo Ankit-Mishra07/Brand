@@ -15,8 +15,14 @@ export const AuthContextProvider = ({children}) => {
         }
     }
 
+    const handleLogout = () => {
+        setIsAuth(false)
+        setToken("")
+        setEmail("")
+    }
+
     return (
-        <AuthContext.Provider value={{token, isAuth, email, handleToken}}>
+        <AuthContext.Provider value={{token, isAuth, email, handleToken, handleLogout}}>
             {children}
         </AuthContext.Provider>
     )

@@ -8,6 +8,8 @@ import ProductDetail from './Pages/ProductDetail';
 import Login from './Pages/Login';
 import PrivateRoutes from './Context/PrivateRoute';
 import Cart from './Pages/Cart';
+import Footer from './components/Footer';
+import Aboutus from './Pages/Aboutus';
 
 function App() {
   return (
@@ -25,7 +27,10 @@ function App() {
           <Cart />
         </PrivateRoutes>
       }></Route>
+      <Route path="/aboutus" element={<Aboutus />}></Route>
       </Routes>
+
+      <Footer />
     </div>
   );
 }
